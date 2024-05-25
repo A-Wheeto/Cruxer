@@ -1,0 +1,27 @@
+<div class="container-fluid bg-light text-center p-2">
+  <h1>
+    <%= @location.name %>
+  </h1>
+</div>
+<div class="container-fluid bg-light my-2 p-2">
+  <div class="row">
+    <div class="col-md-6">
+      <% if @location.address? %>
+        <p><i class="bi bi-geo-alt px-2"></i><%= @location.address %></p>
+      <% end %>
+      <% if @location.phone? %>
+        <p><i class="bi bi-telephone px-2"></i><%= @location.phone %></p>
+      <% end %>
+      <% if @location.email? %>
+        <p><i class="bi bi-envelope-at px-2"></i><%= @location.email %></p>
+      <% end %>
+      <% if @location.website? %>
+        <p><i class="bi bi-browser-chrome px-2"></i><%= @location.website %></p>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <iframe style="height:100%;width:100%;border:0;" frameborder="0" src=<%=  google_map_url(@location.name) %>></iframe></div>
+      <style>#canvas-for-googlemap .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;}</style>
+    </div>
+  </div>
+</div>
