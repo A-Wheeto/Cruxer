@@ -1,10 +1,8 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
-
-<% if user_signed_in? %>
-  <div>Welcome <%= current_user.username %></div>
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= button_to "Sign in", new_user_session_path %>
-<% end %>
+<div class="text-center">
+  <% if current_user %>
+    <h3>Nice to see you again, <%= current_user.username %>!</h3>
+  <% else %>
+    <h3>Welcome to Cruxer: Your Climbing Community!</h3>
+    <p>Join Cruxer and connect with climbers and boulderers worldwide. Share your adventures, discover new routes, and be part of a supportive, passionate community. Let's climb together!</p>
+  <% end %>
+</div>

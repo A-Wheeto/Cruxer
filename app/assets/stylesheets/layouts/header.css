@@ -1,0 +1,16 @@
+.header-div {
+    background-color: #2c86a1;
+}
+
+.header-user-account {
+    text-decoration: none;
+    color: white;
+}
+
+.header-user-account-icon {
+    color: white;
+}
+
+.header-user-account:hover {
+    color: #dde5d9;
+}
