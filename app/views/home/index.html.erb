@@ -1,8 +1,61 @@
-<div class="text-center">
+<div class="text-center border border-1 rounded p-2 bg-light">
   <% if current_user %>
-    <h3>Nice to see you again, <%= current_user.username %>!</h3>
+    <h3 class="mb-0">Nice to see you again, <%= current_user.username %>!</h3>
   <% else %>
     <h3>Welcome to Cruxer: Your Climbing Community!</h3>
-    <p>Join Cruxer and connect with climbers and boulderers worldwide. Share your adventures, discover new routes, and be part of a supportive, passionate community. Let's climb together!</p>
+    <p>Join Cruxer and connect with climbers and boulderers worldwide. Share your adventures, discover new routes, and be part of a supportive, passionate community.</p>
+    <%= link_to "Create an account", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
   <% end %>
+</div>
+
+<div class="row mt-2 p-2">
+  <div class="col-lg-8">
+    <p class="fs-2">Welcome to the Vertical World!</p>
+    <p>Are you ready to challenge yourself physically and mentally, all while enjoying breathtaking views and a strong sense of accomplishment? Welcome to the world of climbing and bouldering! Whether you’re a complete novice or someone looking to transition from indoor gyms to outdoor adventures, this guide will help you take your first steps into the exciting vertical realm.</p>
+    <p class="fs-4">What is Climbing and Bouldering?</p>
+    <p>Climbing involves ascending rock faces or artificial walls using hands, feet, and sometimes special equipment like ropes and harnesses. It can be done indoors at climbing gyms or outdoors on natural rock formations. Climbing has various disciplines, including:</p>
+    <ul>
+      <li><strong>Top-rope climbing:</strong> Climbing with a rope anchored at the top of the climb.</li>
+      <li><strong>Lead climbing:</strong> Climbing while placing protection (gear) along the route as you ascend.</li>
+      <li><strong>Trad climbing:</strong> Using removable gear to protect against falls.</li>
+      <li><strong>Sport climbing:</strong> Climbing with pre-placed anchors on the rock.</li>
+    </ul>
+    <p><strong>Bouldering</strong>, on the other hand, is a form of climbing performed on small rock formations or artificial rock walls without the use of ropes or harnesses. Climbs, known as "problems," are typically shorter and require intense bursts of strength and technique. Safety is maintained with the use of crash pads and spotters.</p>
+  </div>
+  <div class="col align-self-center">
+    <%= image_tag("home-image.png", width: "100%", class: "rounded-5 border border-2") %>
+  </div>
+</div>
+
+<div class="row g-3 my-2">
+  <div class="col-lg">
+    <div class="card h-100">
+      <%= image_tag("top-rope.png", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Basic Gear</h5>
+        <p class="card-text">Learn what you'll need to get started with your climbing journey!</p>
+        <a href="#" class="stretched-link"></a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg">
+    <div class="card h-100">
+      <%= image_tag("lead-climbing.png", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Where to Learn</h5>
+        <p class="card-text">View climbing gym locations around the UK!</p>
+        <%= link_to "", locations_path, class: "stretched-link" %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg">
+    <div class="card h-100">
+      <%= image_tag("trad-climbing.png", class: "card-img-top") %>
+      <div class="card-body">
+        <h5 class="card-title">Getting the Basics Down</h5>
+        <p class="card-text">Tips and Tricks to advance your climbing.</p>
+        <a href="#" class="stretched-link"></a>
+      </div>
+    </div>
+  </div>
 </div>
