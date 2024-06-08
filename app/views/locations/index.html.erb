@@ -1,9 +1,20 @@
 <h1>Climbing Gym Locations</h1>
 
-<ul>
+<form class="d-flex mb-3" role="search">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+<div class="row">
   <% @locations.each do |location| %>
-    <li>
-      <%= link_to location.name, location %>
-    </li>
+    <div class="col-xl-4 mb-3">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title"><%= location.name %></h5>
+          <p class="card-text"><%= location.address %></p>
+          <%= link_to "", location, class: "stretched-link" %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
